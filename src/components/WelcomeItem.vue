@@ -8,6 +8,12 @@
         <slot name="heading"></slot>
       </h3>
       <slot></slot>
+      <div class="extra">
+        <h3>
+          <slot name="extra"></slot>
+          <slot name="extra-heading"></slot>
+        </h3>
+      </div>
     </div>
   </div>
 </template>
@@ -22,6 +28,11 @@
 .details {
   flex: 1;
   margin-left: 1rem;
+}
+
+.extra {
+  flex: 1;
+  margin-block: 1rem;
 }
 
 i {
