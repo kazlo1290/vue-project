@@ -13,16 +13,14 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
 const props = defineProps<{
-  items: { id: number; name: string }[]
-  onRemove: Function
-}>()
+  items: { id: number; name: string }[];
+  onRemove: Function;
+}>();
 
 const removeItem = (itemId: number) => {
-  props.onRemove(itemId)
-}
+  props.onRemove(itemId);
+};
 </script>
 
 <style scoped>

@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 const props = defineProps<{
-  startCount: number
-}>()
+  startCount: number;
+}>();
 
-const count = ref(props.startCount)
+const count = ref(props.startCount);
 
 const incrementCount = () => {
-  count.value++
-}
+  count.value++;
+};
 
 const decrementCount = () => {
-  count.value--
-}
+  count.value--;
+};
 </script>
 
 <template>
@@ -41,6 +41,7 @@ const decrementCount = () => {
   align-items: center;
   font-size: 1.5rem;
 }
+
 .btns {
   display: flex;
   gap: 1rem;

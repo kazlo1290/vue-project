@@ -1,53 +1,20 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import AddListForm from './components/AddListForm.vue'
-import ListRender from './components/ListRender.vue'
-import CountDown from './components/CountDown.vue'
+import NoteAdd from './components/NoteAdd.vue';
+import NoteList from './components/NoteList.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" text="You’ve successfully created a project with" />
-      <AddListForm />
-      <ListRender />
-      <CountDown :start-count="10" />
-    </div>
+  <header
+    class="py-2 text-center text-xl font-bold text-white sm:text-2xl md:py-4 md:text-3xl lg:text-4xl"
+  >
+    Vue Note Ap
   </header>
-
-  <main>
-    <TheWelcome />
+  <main
+    class="mb-4 flex flex-col space-y-2 sm:mb-6 md:mb-8 md:space-y-4 lg:mb-10"
+  >
+    <NoteAdd />
+    <NoteList />
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<style scoped></style>
